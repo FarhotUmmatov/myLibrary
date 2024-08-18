@@ -21,7 +21,7 @@
                     <button>all</button>
                     <button>read</button>
                     <button>unread</button>
-                    <button>addBook</button>
+                    <button id="add-btn">addBook</button>
                 </div>
             </div>
         </div>
@@ -65,29 +65,43 @@
             </div>
         </div>
         <div class="main">
-    
-           <div class="cards-header">
-                
-                <div class="card-container">
-                    <div class="cards">
-                        <h5></h5>
-                        <p>
-                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
-                            sed diam nonumy  consetetur sadipscing elitr, 
-                            sed diam
-                        </p> 
-                        <div>
-                            
-                        </div>
-                    </div>
-                    
-                </div>
+            <div id="form-container">
+                <form id="bookForm">
+                    <span id="close-btn">
+                        <svg id="close-btn" xmlns="http://www.w3.org/2000/svg" width="30" height="30" version="1.1" viewBox="0 0 38 38" fill="#fff">
+                            <circle style="fill:#6134dc" cx="16" cy="16" r="14"/>
+                            <g transform="matrix(0.70710678,0.70710678,-0.70710678,0.70710678,16,-6.627417)">
+                             <rect style="fill:#ffffff" width="4" height="20" x="-18" y="6" transform="matrix(0,-1,1,0,0,0)"/>
+                             <rect style="fill:#ffffff" width="4" height="20" x="14" y="6"/>
+                            </g>
+                        </svg>
+                    </span>
+                    <h2>add a book</h2>
+                    <label for="title">Title:</label>
+                    <input type="text" id="title" name="title" required><br><br>
+                  
+                    <label for="author">Author:</label>
+                    <input type="text" id="author" name="author" required><br><br>
+                  
+                    <label for="pages">Pages:</label>
+                    <input type="number" id="pages" name="pages" required><br><br>
+                  
+                    <select id="read-status" required>
+                        <option value="">Have you read it?</option>
+                        <option value="Read">Read</option>
+                        <option value="Not Read">Not Read</option>
+                    </select>
+                  
+                    <button type="submit" class="submit-btn">Save</button>
+                  </form>
             </div>
-             
+            <div id="card-container">
+                <!-- The books will be displayed here -->
+            </div>
             </div> 
         </div>
 
     </div>
-    
+    <script src="main.js"></script>    
 </body>
 </html>
